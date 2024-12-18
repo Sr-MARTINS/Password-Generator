@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+.container {
+    min-width: 900px;
+    min-height: 500px;
+}
+
+.container header {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 1rem;
+    color: #425263;
+}
+.container header h1 {
+    font-size: 3.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.container main {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 2rem;
+}
+
+.container main .img {
+    background-image: url('../img/fraca.png');
+    background-position: center;
+    background-size: cover;
+    border: 1px solid black;
+    height: 220px;
+    width: 320px;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    margin-right: 2rem; 
+}
+/* .container main .img img {
+    width: 80%;
+} */
+
+.container main .conteudo {
+    padding: 10px;
+}
+
+.container main #senha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 2rem 2rem;
+}
+.container main #senha .from-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 0 0 10px;
+    border: 1px solid #8080809f;
+    border-radius: 3rem;
+    background: #fff;
+}
+.container main #senha .from-cont input[type="text"] {
+    width:50%;
+    height: 40px;
+    background: #fff;
+    padding-left: 15px;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+}
+
+.container main #senha .from-cont #opSenha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30%;
+    margin: 0 5px;
+    font-family: 700;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(18, 211, 18);
+}
+.container main #senha .from-cont  button {
+    border: none;
+    width: 10%;
+    padding-top: 3px;
+    background-color: transparent;
+    color: rgb(80, 77, 77);
+    font-size: 1.3rem;
+}
+.container main #senha .from-cont  button:hover {
+    cursor: pointer;
+}
+
+.container main #senha #copySenha {
+    width: 95px;
+    height: 40px;
+    border-radius: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    background-color: rgb(40, 2, 255);
+    color: #fff;
+    border: none;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+.container main #senha #copySenha:hover {
+    cursor: pointer;
+}
+
+.container main #tamanho, #caracter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 1.5rem 1rem ;
+}
+.container main .text {
+    width: 160px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #000000ad;
+    margin-right:20px ;
+}
+
+.container main .itens input[type="range"] {
+    /* -webkit-appearance: none; */
+    /* appearance: none; */
+    background: linear-gradient(90deg, transparent 28.5714%, rgb(0, 112, 246) 28.6714%);
+    width: 200px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 300px;
+}
+.container main .itens .btn{
+    border: 1px solid rgb(110, 103, 103);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: rgb(94, 89, 89);
+    background: transparent ;
+}
+.container main .itens input[type="checkbox"] {
+    width: 32px;
+    height: 18px;
+    color: black;
+}
+.container main .itens label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador-de-Senha</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gerador de Senha Aleatória</h1>
+            <p>Crie senhas fortes e seguras para proteger suas contas online.</p>
+        </header>
+        <main>
+            <div class="img">
+                <!-- <img src="img/muitoForte.png" alt=""> -->
+            </div>
+            <div class="conteudo">
+               <div id="senha">
+                    <form class="from-cont">
+                        <input type="text" id="inSenha">
+
+                        <span id="opSenha">Muito Fraca</span>
+
+                        <button id="btReset">
+                            <i class="bi bi-arrow-counterclockwise"></i>
+                        </button>
+                    </form>
+
+                    <button id="copySenha">
+                        Copiar
+                    </button>
+               </div>
+
+               <div id="tamanho">
+                    <div class="text">
+                        <p>Tamanho da Senha : 15</p>
+                    </div>
+                    <div class="itens">
+                        <button class="btn"> - </button>
+
+                        <input type="range" name="numCaracters" id="numCaracters">
+                        
+                        <button class="btn"> + </button>
+                    </div>
+               </div>
+
+               <div id="caracter">
+                <div class="text">
+                    <p>Caracteres a usar:</p>
+                </div>
+
+                <div class="itens">
+                    <input type="checkbox" name="ABC" id="leterMaior" checked>
+                    <label for="ABC"> ABC </label>
+
+                    <input type="checkbox" name="abc" id="leterMenos" checked>
+                    <label for="abc"> abc </label>
+
+                    <input type="checkbox" name="123" id="number" checked>
+                    <label for="123"> 123 </label>
+
+                    <input type="checkbox" name="#$&" id="caracterEspeciais" checked>
+                    <label for="#%&"> #%& </label>
+                </div>
+
+               </div>
+
+            </div>
+        </main>
+    </div>
+    
+</body>
+</html>
