@@ -52,30 +52,31 @@ body {
 } */
 
 .container main .conteudo {
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .container main #senha {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 0 2rem 2rem;
+    margin: 0 0 2rem 0.3rem;
 }
 .container main #senha .from-cont {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 3px 0 0 10px;
+    padding:3px;
     border: 1px solid #8080809f;
     border-radius: 3rem;
-    background: #fff;
 }
-.container main #senha .from-cont input[type="text"] {
-    width:50%;
-    height: 40px;
+.container main #senha .from-cont p {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width:200px;
     background: #fff;
     padding-left: 15px;
     font-size: 1.1rem;
+    text-align: center;
     border: none;
     outline: none;
 }
@@ -84,8 +85,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 30px;
-    width: 30%;
+    height: 33px;
+    width: 93px;
     margin: 0 5px;
     font-family: 700;
     border: none;
@@ -105,8 +106,8 @@ body {
 }
 
 .container main #senha #copySenha {
-    width: 95px;
-    height: 40px;
+    width: 92px;
+    height: 38px;
     border-radius: 1rem;
     font-weight: 700;
     font-size: 1rem;
@@ -114,7 +115,7 @@ body {
     background-color: rgb(40, 2, 255);
     color: #fff;
     border: none;
-    margin-left: 20px;
+    margin-left: 12px;
     transition: 0.5s;
 }
 .container main #senha #copySenha:hover {
