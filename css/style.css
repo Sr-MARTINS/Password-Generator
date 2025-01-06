@@ -12,15 +12,15 @@ body {
     height: 100vh;
 }
 
-.container {
+/* .container {
     min-width: 900px;
     min-height: 500px;
-}
+} */
 
 .container header {
     text-align: center;
     padding: 10px;
-    margin-bottom: 1rem;
+    margin-bottom: 2.4rem;
     color: #425263;
 }
 .container header h1 {
@@ -36,62 +36,50 @@ body {
 }
 
 .container main .img {
-    /* background-image: url('../img/fraca.png'); */
-    background-position: center;
+    background-image: url('../img/fraca.png');
     background-size: cover;
-    border: 1px solid black;
-    height: 220px;
+    background-position: center;
+    height: 255px;
     width: 320px;
-    display: flex;
-    align-items:center ;
-    justify-content: center;
-    margin-right: 2rem; 
-}
-/* .container main .img img {
-    width: 80%;
-} */
-
-.container main .conteudo {
-    /* padding: 10px; */
+    margin-right: 4em; 
 }
 
 .container main #senha {
     display: flex;
     align-items: center;
-    justify-content: center;
     margin: 0 0 2rem 0.3rem;
 }
 .container main #senha .from-cont {
     display: flex;
     align-items: center;
-    padding:3px;
     border: 1px solid #8080809f;
+    padding: 7px;
+    box-shadow: inset 0 4px 4px #00000018;
     border-radius: 3rem;
 }
 .container main #senha .from-cont p {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    width:200px;
-    background: #fff;
+    /* overflow:hidden; */
+    /* flex-wrap: nowrap; */
+    width: 300px;
+    height: 33px;
     padding-left: 15px;
     font-size: 1.1rem;
     text-align: center;
-    border: none;
-    outline: none;
 }
 
 .container main #senha .from-cont #opSenha {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 33px;
-    width: 93px;
+    height: 23px;
+    min-width: 100px;
     margin: 0 5px;
     font-family: 700;
     border: none;
     border-radius: 6px;
-    background-color: rgb(18, 211, 18);
+    color: #071d2b;
 }
 .container main #senha .from-cont  button {
     border: none;
@@ -101,7 +89,7 @@ body {
     color: rgb(80, 77, 77);
     font-size: 1.3rem;
 }
-.container main #senha .from-cont  button:hover {
+.container main #senha .from-cont  button:hover,#copySenha:hover {
     cursor: pointer;
 }
 
@@ -118,28 +106,21 @@ body {
     margin-left: 12px;
     transition: 0.5s;
 }
-.container main #senha #copySenha:hover {
-    cursor: pointer;
-}
 
 .container main #tamanho, #caracter {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 0 0 1.5rem 1rem ;
+    margin: 0 0 2.8rem 1rem ;
 }
 .container main .text {
-    width: 160px;
-    font-size: 1.3rem;
-    font-weight: 300;
+    width: 120px;
+    font-size: 1.1rem;
     letter-spacing: 1px;
     color: #000000ad;
     margin-right:20px ;
 }
 
 .container main .itens input[type="range"] {
-    /* -webkit-appearance: none; */
-    /* appearance: none; */
     background: linear-gradient(90deg, transparent 28.5714%, rgb(0, 112, 246) 28.6714%);
     width: 200px;
     height: 12px;

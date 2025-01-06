@@ -1,7 +1,9 @@
+const img = document.querySelector(".img")
+
 const senha = document.querySelector("#inSenha");
 const opSenha = document.querySelector("#opSenha");
-// const btResent = document.querySelector("#btReset");
-// const btCopy = document.querySelector("#btCopy");
+const btResent = document.querySelector("#btReset");
+const btCopy = document.querySelector("#copySenha");
 
 const lengInput = document.querySelector("#numCaracters")
 const infoLeng = document.querySelector(".leng")
@@ -50,12 +52,25 @@ const getPasswordSize = () => {
 
     if( numSize <= 5) {
         opSenha.textContent = "muito fraca"
-    }else if ( numSize >= 6 && numSize <= 8){
+        opSenha.style.backgroundColor="#FF7800"
+        img.style.backgroundImage = "url('../img/muitoFraca.png')"
+    }else if ( numSize >= 5 && numSize <= 7){
         opSenha.textContent = "fraca"
-    }else if (numSize >= 9 && numSize <=14) {
+        opSenha.style.backgroundColor="#FFB370"
+        img.style.backgroundImage = "url('../img/fraca.png')"
+    }else if (numSize >= 8 && numSize <=10) {
+        opSenha.textContent = "Boa"
+        opSenha.style.backgroundColor="#FFDDBF"
+        img.style.backgroundImage = "url('../img/boa.png')"
+        
+    } else if (numSize >= 11 && numSize <= 15){
         opSenha.textContent = "forte"
-    } else {
-        opSenha.textContent = "muito forte"
+        opSenha.style.backgroundColor="#D5F2A5"
+        img.style.backgroundImage = "url('../img/forte.png')"
+    }else {
+        opSenha.textContent = "Muito forte"
+        opSenha.style.backgroundColor="#9AE437"
+        img.style.backgroundImage = "url('../img/muitoForte.png')"
     }
 }
     
@@ -73,17 +88,35 @@ const generetPassword = (charType) => {
 
         //Elemento Input - bolinha valor
 infoLeng.textContent = lengInput.value
-lengInput.addEventListener("change", () => {
+    lengInput.addEventListener("input", () => {
     infoLeng.textContent = lengInput.value
-    getPasswordSize()
+    getPasswordSize(generetPassword(elementsPass()))
 })
-    
 
+    //COMEÇAR GERANDO UMA SONHA
+getPasswordSize(generetPassword(elementsPass()))
 
 btDeminuir.addEventListener("click", () => {
-   generetPassword(elementsPass())
+   const mais = lengInput.value
+
+   let novLength = ""
+   for(i = 0; i < mais; i++) {
+    novLength = mais[i] - 1
+   }
+   infoLeng.textContent = novLength
+   
  })
  
- btAlmentar.addEventListener("click", () => {
+btAlmentar.addEventListener("click", () => {
     // getPasswordSize()
  })
+ 
+btResent.addEventListener("click", (e) => {
+    e.preventDefault()
+    getPasswordSize(generetPassword(elementsPass()))
+})
+btCopy.addEventListener("click", () => {
+    navigator.clipboard.writeText(senha.textContent).then(() => {
+        alert("Senha copiada")
+    })
+})
