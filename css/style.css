@@ -53,6 +53,7 @@ body {
     display: flex;
     align-items: center;
     border: 1px solid #8080809f;
+    width: 447px;
     padding: 7px;
     box-shadow: inset 0 4px 4px #00000018;
     border-radius: 3rem;
@@ -60,11 +61,13 @@ body {
 .container main #senha .from-cont p {
     display: flex;
     align-items: center;
-    /* overflow:hidden; */
-    /* flex-wrap: nowrap; */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     width: 300px;
     height: 33px;
     padding-left: 15px;
+    
     font-size: 1.1rem;
     text-align: center;
 }
@@ -75,7 +78,7 @@ body {
     justify-content: center;
     height: 23px;
     min-width: 100px;
-    margin: 0 5px;
+    margin: 0 8px;
     font-family: 700;
     border: none;
     border-radius: 6px;
@@ -83,7 +86,7 @@ body {
 }
 .container main #senha .from-cont  button {
     border: none;
-    width: 10%;
+    width: 30px;
     padding-top: 3px;
     background-color: transparent;
     color: rgb(80, 77, 77);

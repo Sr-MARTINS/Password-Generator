@@ -96,16 +96,20 @@ infoLeng.textContent = lengInput.value
     //COMEÇAR GERANDO UMA SONHA
 getPasswordSize(generetPassword(elementsPass()))
 
-btDeminuir.addEventListener("click", () => {
-   const mais = lengInput.value
+// const aumentar = () => {
+//   let valor = lengInput.value;
+//   let lex = ""
+// //   for(i = 0; i < valor; i--)  {
+// //     infoLeng.textContent = lex[i];
+// //     // break
+// //   }   
 
-   let novLength = ""
-   for(i = 0; i < mais; i++) {
-    novLength = mais[i] - 1
-   }
-   infoLeng.textContent = novLength
-   
- })
+// }
+
+
+btDeminuir.addEventListener("click", () => {
+    // aumentar()
+})
  
 btAlmentar.addEventListener("click", () => {
     // getPasswordSize()
