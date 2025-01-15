@@ -106,6 +106,7 @@ btDeminuir.addEventListener("click", () => {
         lengInput.value = currentValue - 1
         getPasswordSize()
         infoLeng.textContent = lengInput.value
+        getPasswordSize(generetPassword(elementsPass()))
     }
 
 })
@@ -118,6 +119,7 @@ btAlmentar.addEventListener("click", () => {
         lengInput.value = currentValue + 1
         getPasswordSize()
         infoLeng.textContent = lengInput.value
+        getPasswordSize(generetPassword(elementsPass()))
     }
 
  })
