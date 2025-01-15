@@ -6,6 +6,7 @@ const btResent = document.querySelector("#btReset");
 const btCopy = document.querySelector("#copySenha");
 
 const lengInput = document.querySelector("#numCaracters")
+
 const infoLeng = document.querySelector(".leng")
 
 const btDeminuir = document.querySelector("#deminuirCaracters")
@@ -96,23 +97,29 @@ infoLeng.textContent = lengInput.value
     //COMEÇAR GERANDO UMA SONHA
 getPasswordSize(generetPassword(elementsPass()))
 
-// const aumentar = () => {
-//   let valor = lengInput.value;
-//   let lex = ""
-// //   for(i = 0; i < valor; i--)  {
-// //     infoLeng.textContent = lex[i];
-// //     // break
-// //   }   
-
-// }
-
 
 btDeminuir.addEventListener("click", () => {
-    // aumentar()
+    const currentValue = parseInt(lengInput.value, 10)
+    const minValue  = parseInt(lengInput.max, 10)
+
+    if(currentValue < minValue) {
+        lengInput.value = currentValue - 1
+        getPasswordSize()
+        infoLeng.textContent = lengInput.value
+    }
+
 })
  
 btAlmentar.addEventListener("click", () => {
-    // getPasswordSize()
+    const currentValue = parseInt(lengInput.value, 10)
+    const maxValue = parseInt(lengInput.max, 10)
+
+    if(currentValue < maxValue) {
+        lengInput.value = currentValue + 1
+        getPasswordSize()
+        infoLeng.textContent = lengInput.value
+    }
+
  })
  
 btResent.addEventListener("click", (e) => {
